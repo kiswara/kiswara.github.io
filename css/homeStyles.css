@@ -1,0 +1,142 @@
+body {
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+#topBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #E7E5D9;
+	display: table;
+	z-index: 1;
+}
+
+#topBar .imageContainer {
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+}
+
+#introduction {
+	position: absolute;
+	display: table;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#introduction .textContainer {
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+	position: relative;
+}
+
+.logo {
+	opacity: 0.4;
+	display: inline;
+	height: 42px;
+	width: 44px;
+	margin-left: 12px;
+}
+
+.logo:hover {
+	opacity: 1.0;
+}
+
+#welcomeText {
+	opacity: 0.5;
+	font-family: Helvetica, "Times New Roman";
+	color: #73726C;
+}
+
+.descriptionContainer {
+	width: 60%;
+	height: 60%;
+	display: none;
+	color: #73726C;
+	font-family: Helvetica, "Times New Roman";
+}
+
+.welcomeFontSize {
+	font-size: 100%;
+}
+
+.descriptionFontSize {
+	font-size: 75%;
+}
+
+.profilePicture {
+	height: 200px;
+	width: 200px;
+}
+
+#rightSideBar {
+	float: right;
+	background-color: #EDEDED;
+	opacity: 0.5;
+	height: 100vh;
+	width: 65px;
+}
+
+#leftSideBar {
+	float: left;
+	background-color: #EDEDED;
+	opacity: 0.5;
+	height: 100vh;
+	width: 65px;
+}
+
+#leftSideBar:hover {
+	opacity:1.0;
+}
+
+#rightSideBar:hover {
+	opacity:1.0;
+}
+
+.taskList {
+	text-align: start;
+}
+@media screen and (min-width: 1450px) {
+	.welcomeFontSize {
+		font-size: 150%;
+	}
+
+	.descriptionFontSize {
+		font-size: 100%;
+	}
+
+	.profilePicture {
+		height: 267px;
+		width: 267px;
+	}
+}
+
+@media screen and (min-width: 2142px) {
+	.welcomeFontSize {
+		font-size: 250%;
+	}
+
+	.descriptionFontSize {
+		font-size: 150%;
+	}
+
+	.profilePicture {
+		height: 400px;
+		width: 400px;
+	}
+}
+
+.descriptionText {
+	text-align: start;
+	margin-left: 32px;
+}
+
+#linkedinPlugText {
+	text-align: center;
+}

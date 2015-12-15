@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/homeStyles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#welcomeText").fadeIn(3000);
+		$("#welcomeText").fadeOut(3000, function() {
+			$(".tableContainer table:first").fadeIn(3000).css("display", "inline-table");
+		});
+
+		$("#leftSideBar").click(function(){
+	        if ($(".tableContainer table:visible").prev().length != 0)
+            	$(".tableContainer table:visible").fadeOut(1000, function() {
+            		$(this).prev().fadeIn(1000).css("display", "inline-table");
+            	});
+	        else {
+	            $(".tableContainer table:visible").fadeOut(1000, function() {
+	            	$(".tableContainer table:last").fadeIn(1000).css("display", "inline-table");
+	            });
+	        }
+		});	
+
+		$("#rightSideBar").click(function(){
+	        if ($(".tableContainer table:visible").next().length != 0)
+            	$(".tableContainer table:visible").fadeOut(1000, function() {
+            		$(this).next().fadeIn(1000).css("display", "inline-table");
+            	});
+	        else {
+	            $(".tableContainer table:visible").fadeOut(1000, function() {
+	            	$(".tableContainer table:first").fadeIn(1000).css("display", "inline-table");
+	            });
+	        }
+		});
+	});
+</script>
+</head>
+
+<body>
+<div id="topBar">
+	<div class="imageContainer">
+		<a href="https://www.linkedin.com/in/kaleb-iswara-1a195883" style="color:transparent"> 
+			<img src="img/linkedin-logo.png" alt=" " class="logo" /> 
+		</a>
+		<a href="https://github.com/kiswara" style="color:transparent"> 
+			<img src="img/github-logo.png" alt=" " class="logo" /> 
+		</a>
+		<a href="https://www.facebook.com/kaleb.iswara" style="color:transparent"> 
+			<img src="img/facebook-logo.png" alt=" " class="logo" /> 
+		</a>
+	</div>
+</div>
+
+<div id="rightSideBar">
+</div>
+
+<div id="leftSideBar">
+</div>
+
+<div id="introduction">
+	<div class="textContainer">
+		<p id="welcomeText" class="welcomeFontSize"> Hi there, nice of you to drop by </p>
+
+		<div class="tableContainer">
+			<table class="descriptionContainer" class="descriptionFontSize">
+				<tr>
+					<td>
+						<img src="img/sample-picture.jpg" alt=" " class="profilePicture" />
+					</td>
+					<td> 			
+						<p class="descriptionText"> Welcome to my website! <br> <br>
+							I am Kaleb. <br>
+							I was born in Jakarta, Indonesia. <br>
+							I earned my bachelor's degree in Computer Science at University of Michigan. <br>
+							I interned on the Amazon Fresh team in Irvine, CA (Summer 2014) <br> 
+							I am currently a software development engineer at Microsoft (Redmond, WA) <br> <br>
+							To learn more about my experiences at Amazon and Microsoft, navigate the website using the panels on the sides! <br>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p id="linkedinPlugText"> Or, you know, click on the linkedin icon on the header. Everything you need to know is there anyway </p>
+					</td>
+				</tr>
+			</table>
+
+			<!-- Amazon -->
+			<table class="descriptionContainer" class="descriptionFontSize">
+				<tr>
+					<td>
+						<img src="img/amazon-logo.png" alt=" " class="profilePicture" />
+					</td>
+					<td> 			
+						<p class="descriptionText"> Amazon Inc. <br>
+							Software Development Engineer Intern <br>
+							May 2014 - July 2014 <br> <br>
+							I worked on the Amazon Fresh Search & Discovery Team. <br> <br>
+							What I did during my internship: <br>
+							<ol class="taskList">
+								<li> Redesigned controls on the Amazon Fresh website using CSS and Javascript </li>
+								<li> Exposed filtering option for product search results </li>
+								<li> Implemented a data storage system using Sable (http://www.amazon.jobs/team/sable) with logic that parses and then processes JSON objects from other storage systems. The resulting data enables a new sorting option for product search results </li>
+							</ol>
+						</p>
+					</td>
+				</tr>
+			</table>
+
+			<!-- Microsoft -->
+			<table class="descriptionContainer" class="descriptionFontSize">
+				<tr>
+					<td>
+						<img src="img/microsoft-logo.png" alt=" " class="profilePicture" />
+					</td>
+					<td> 			
+						<p class="descriptionText"> Microsoft Corporation <br>
+							Software Development Engineer <br>
+							July 2015 - Present <br> <br>
+							Currently working on the Office 365 Outlook Groups team <br>
+							Our application is now available on <a target="_blank" href="https://itunes.apple.com/us/app/outlook-groups/id1027125154?mt=8">iOS</a>, <a target="_blank" href="https://play.google.com/store/apps/details?id=com.microsoft.outlookgroups&hl=en">Android</a>,<a target="_blank" href="https://www.microsoft.com/en-us/store/apps/outlook-groups/9nblggh1pbr5"> Windows Phone</a> as well as <a href="https://outlook.office365.com/owa/">OWA(Outlook Web App)</a>! <br> <br>
+							I am currently working on Outlook Groups for Windows Phone. <br>
+							Prior to this, I was working on Outlook Groups for OWA. <br>
+						</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>	
