@@ -10,32 +10,50 @@
 			$(".tableContainer table:first").fadeIn(3000).css("display", "inline-table");
 		});
 
-		$("#leftSideBar").click(function(){
-	        if ($(".tableContainer table:visible").prev().length != 0)
-            	$(".tableContainer table:visible").fadeOut(1000, function() {
-            		$(this).prev().fadeIn(1000).css("display", "inline-table");
-            	});
-	        else {
-	            $(".tableContainer table:visible").fadeOut(1000, function() {
-	            	$(".tableContainer table:last").fadeIn(1000).css("display", "inline-table");
-	            });
-	        }
-		});	
+		$("#leftSideBar").click(navigateLeft);	
 
-		$("#rightSideBar").click(function(){
-	        if ($(".tableContainer table:visible").next().length != 0)
-            	$(".tableContainer table:visible").fadeOut(1000, function() {
-            		$(this).next().fadeIn(1000).css("display", "inline-table");
-            	});
-	        else {
-	            $(".tableContainer table:visible").fadeOut(1000, function() {
-	            	$(".tableContainer table:first").fadeIn(1000).css("display", "inline-table");
-	            });
-	        }
-		});
+		$("#rightSideBar").click(navigateRight);
 	});
+
+	$(document).keydown(function(e) {
+		switch (e.which) {
+			case 37:
+				navigateLeft();
+				break;
+			case 39:
+				navigateRight();
+				break;
+		}
+	})
+
+	function navigateLeft(){
+        if ($(".tableContainer table:visible").prev().length != 0)
+        	$(".tableContainer table:visible").fadeOut(1000, function() {
+        		$(this).prev().fadeIn(1000).css("display", "inline-table");
+        	});
+        else {
+            $(".tableContainer table:visible").fadeOut(1000, function() {
+            	$(".tableContainer table:last").fadeIn(1000).css("display", "inline-table");
+            });
+        }
+	}
+
+	function navigateRight(){
+        if ($(".tableContainer table:visible").next().length != 0)
+        	$(".tableContainer table:visible").fadeOut(1000, function() {
+        		$(this).next().fadeIn(1000).css("display", "inline-table");
+        	});
+        else {
+            $(".tableContainer table:visible").fadeOut(1000, function() {
+            	$(".tableContainer table:first").fadeIn(1000).css("display", "inline-table");
+            });
+        }
+	}
+
+
 </script>
 
+<!-- Google Analytics Code -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -87,7 +105,7 @@
 							I earned my bachelor's degree in Computer Science at University of Michigan. <br>
 							I interned on the Amazon Fresh team in Irvine, CA (Summer 2014) <br> 
 							I am currently a software development engineer at Microsoft (Redmond, WA) <br> <br>
-							To learn more about my experiences at Amazon and Microsoft, navigate the website using the panels on the sides! <br>
+							To learn more about my experiences at Amazon and Microsoft, navigate the website using the panels on the sides or use your right/left arrow keys! <br>
 						</p>
 					</td>
 				</tr>
